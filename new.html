@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  .bannerinsite-item.multiple * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Nirmala", sans-serif;
+  }
+
+  .bannerinsite-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .bannerinsite-container {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9) 0,
+        rgba(255, 255, 255, 0.5) 34%,
+        rgba(255, 255, 255, 0) 44%,
+        rgba(255, 255, 255, 0) 100%),
+      url(https://bannerinsitepublicimages.blob.core.windows.net/bannerimages/jim_ellis_buick_gmc_bg_mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 25%;
+    background-size: 140% auto;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .bannerinsite-item {
+    padding-block: 0.4rem;
+    padding-inline: 1rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-container {
+    width: 350px;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-title {
+    color: #1e1a34;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-price-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-image-container {
+    width: 100%;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-img {
+    width: inherit;
+    clip-path: polygon(7% 29%, 86% 28%, 86% 77%, 7% 79%);
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-title {
+    font-size: 1.56rem;
+    margin: 1rem;
+    text-align: left;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-price {
+    font-size: 2rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-other-options {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+    margin-top: -4rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-option {
+    background-color: red;
+    padding: 0.2rem;
+    padding-inline: 0.4rem;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.2rem;
+    font-size: small;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-other-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    /* padding-top: 1rem; */
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-finance-for {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-inline: 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-lease-for {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-text-for {
+    max-width: 4rem;
+    text-align: right;
+    padding-top: 0.2rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-details {
+    font-size: 0.5rem;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-uppercase {
+    text-transform: uppercase;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-text-white {
+    color: white;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-offers {
+    font-size: x-small;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-finance-lease-container {
+    display: flex;
+    /* gap: 1rem; */
+  }
+
+  .bannerinsite-item.multiple .bannerinsite-divider {
+    width: 0.2rem;
+    height: 2.5rem;
+    background-color: #1e1a34;
+  }
+
+  @media (min-width: 425px) {
+    .bannerinsite-container {
+      background-size: 140% auto;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      background-position: 40% 25%;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-other-buttons-container {
+      padding-top: 0;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-other-options {
+      margin-top: -4rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .bannerinsite-container {
+      background-size: 140% auto;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      background-position: 40% 25%;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-option {
+      border-radius: 0.2rem;
+      font-size: small;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-other-options {
+      margin-top: -5rem;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-other-buttons-container {
+      padding-top: 1rem;
+    }
+
+    .bannerinsite-item.multiple .bannerinsite-other-options {
+      margin-top: -5rem;
+    }
+  }
+</style>
+
+<body>
+  <div class="bannerinsite-block" data-client-id="21" data-site-page="specials"
+    data-site-url="https://www.calavankiawest.com" data-site-id="15" id="bannerInsiteSpecials">
+    <!-- First Item-->
+    <div class="bannerinsite-item multiple">
+      <!-- multiple class for multiple adverts -->
+      <div class="bannerinsite-container">
+        <div class="bannerinsite-info">
+          <h2 class="bannerinsite-title bannerinsite-uppercase bannerinsite-margin">
+            2024 GMC Canyon
+          </h2>
+          <div class="bannerinsite-finance-lease-container">
+            <div class="bannerinsite-finance-for bannerinsite-uppercase">
+              <div class="bannerinsite-price-text">
+                <p class="bannerinsite-text-for bannerinsite-margin">
+                  Finance For
+                </p>
+                <h1 class="bannerinsite-price bannerinsite-margin">$606</h1>
+              </div>
+              <div class="bannerinsite-details">
+                <p class="bannerinsite-p bannerinsite-margin bannerinsite-details-p">
+                  For 84 Months | 7.3% APR
+                </p>
+                <p class="bannerinsite-sub-text bannerinsite-p bannerinsite-margin">
+                  With Down Payment of $1,911
+                </p>
+                <p class="bannerinsite-discounts bannerinsite-margin"></p>
+              </div>
+            </div>
+            <div class="bannerinsite-divider"></div>
+            <div class="bannerinsite-lease-for bannerinsite-uppercase">
+              <div class="bannerinsite-price-text">
+                <p class="bannerinsite-text-for bannerinsite-margin">
+                  Lease For
+                </p>
+                <h1 class="bannerinsite-price bannerinsite-margin">$586</h1>
+              </div>
+              <div class="bannerinsite-details">
+                <p class="bannerinsite-p bannerinsite-details-p bannerinsite-margin">
+                  For 60 Months | 9.44% APR
+                </p>
+                <p class="bannerinsite-sub-text bannerinsite-p bannerinsite-margin">
+                  YR. Mileage 12,000 | $2,497 Upfront
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bannerinsite-image-container">
+          <img class="bannerinsite-img"
+            src="https://d2ivfcfbdvj3sm.cloudfront.net/6fd260a869c389e6f8668ba55dfb5f70ed0d4a540817378c88cc1df8abcb86646d/color_0640_032_png/MY2023/53281/53281_cc0640_032_GAZ.webp"
+            alt="" />
+        </div>
+        <div class="bannerinsite-other-options">
+          <div class="bannerinsite-other-buttons-container">
+            <a class="bannerinsite-option BannerinsiteShopButton" href="#"
+              onclick="bannerInsiteClick('1GTP5BEK8R1114647')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                View Details <span>&#10137;</span>
+              </h3>
+            </a>
+            <a class="bannerinsite-option BannerinsiteShopButton" href="#"
+              onclick="bannerInsiteContact('1GTP5BEK8R1114647','15','2024','GMC','Canyon','Elevation')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                Contact Us <span>&#10137;</span>
+              </h3>
+            </a>
+            <a style="display: none" class="bannerinsite-option BannerinsiteDealButton" href="#"
+              onclick="bannerInsiteContact('1GTP5BEK8R1114647','15','2024','GMC','Canyon','Elevation')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                Get Deal
+              </h3>
+              <p class="bannerinsite-right-arrow bannerinsite-margin">→</p>
+            </a>
+          </div>
+          <p onclick="bannerInsiteDisclaimerModal('1GTP5BEK8R1114647','2024','GMC','Canyon','Elevation')"
+            class="bannerinsite-offers bannerinsite-uppercase bannerinsite-margin bannerinsite-text-white">
+            *Offers and Disclaimer
+          </p>
+        </div>
+      </div>
+      <div style="display: none" id="BannerinsiteFinancingDisclaimerText_1GTP5BEK8R1114647">
+        The payment shown is an estimate and not an offer. Your terms may
+        differ based on your credit history. Not all customers will qualify
+        for financing. Incentives shown are based on dealer zip code. We try
+        to keep vehicle inventory, manufacturer rebates, and pricing up to
+        date, but we cannot guarantee that this vehicle will be available when
+        you get to Jim Ellis Buick GMC Atlanta or that there may not be some
+        variation from what you see estimated here.<br />
+        For a lease it is important to understand that if you return your
+        vehicle and mileage exceeds the amount allowed under your lease, you
+        will be responsible for the excess miles driven. Tax, tag, title,
+        dealer doc, and Warranty Rights Act fees excluded. Available to
+        qualified customers with approved credit. See dealer for full details.
+        Finace offer expires on 2024-04-30. Lease offer expires on 2024-04-30
+      </div>
+    </div>
+    <!-- Second Item -->
+    <div class="bannerinsite-item multiple">
+      <!-- multiple class for multiple adverts -->
+      <div class="bannerinsite-container">
+        <div class="bannerinsite-info">
+          <h2 class="bannerinsite-title bannerinsite-uppercase bannerinsite-margin">
+            2023 GMC Acadia
+          </h2>
+          <div class="bannerinsite-finance-lease-container">
+            <div class="bannerinsite-finance-for bannerinsite-uppercase">
+              <div class="bannerinsite-price-text">
+                <p class="bannerinsite-text-for bannerinsite-margin">
+                  Finance For
+                </p>
+                <h1 class="bannerinsite-price bannerinsite-margin">$757</h1>
+              </div>
+              <div class="bannerinsite-details">
+                <p class="bannerinsite-p bannerinsite-margin bannerinsite-details-p">
+                  For 84 Months | 7.3% APR
+                </p>
+                <p class="bannerinsite-sub-text bannerinsite-p bannerinsite-margin">
+                  With Down Payment of $2,396
+                </p>
+                <p class="bannerinsite-discounts bannerinsite-margin"></p>
+              </div>
+            </div>
+            <div class="bannerinsite-divider"></div>
+            <div class="bannerinsite-lease-for bannerinsite-uppercase">
+              <div class="bannerinsite-price-text">
+                <p class="bannerinsite-text-for bannerinsite-margin">
+                  Lease For
+                </p>
+                <h1 class="bannerinsite-price bannerinsite-margin">$818</h1>
+              </div>
+              <div class="bannerinsite-details">
+                <p class="bannerinsite-p bannerinsite-details-p bannerinsite-margin">
+                  For 60 Months | 9.44% APR
+                </p>
+                <p class="bannerinsite-sub-text bannerinsite-p bannerinsite-margin">
+                  YR. Mileage 12,000 | $3,215 Upfront
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bannerinsite-image-container">
+          <img class="bannerinsite-img"
+            src="https://d2ivfcfbdvj3sm.cloudfront.net/6fd260a869c389e6f8668ba55dfb5f70ed0d4a540916398588cc1df8abcb86646d/color_0640_032_png/MY2023/52368/52368_cc0640_032_G1W.webp"
+            alt="" />
+        </div>
+        <div class="bannerinsite-other-options">
+          <div class="bannerinsite-other-buttons-container">
+            <a class="bannerinsite-option BannerinsiteShopButton" href="#"
+              onclick="bannerInsiteClick('1GKKNPLS0PZ192305')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                View Details <span>&#10137;</span>
+              </h3>
+            </a>
+            <a class="bannerinsite-option BannerinsiteShopButton" href="#"
+              onclick="bannerInsiteContact('1GKKNPLS0PZ192305','15','2023','GMC','Acadia','Denali')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                Contact Us <span>&#10137;</span>
+              </h3>
+            </a>
+            <a style="display: none" class="bannerinsite-option BannerinsiteDealButton" href="#"
+              onclick="bannerInsiteContact('1GKKNPLS0PZ192305','15','2023','GMC','Acadia','Denali')">
+              <h3 class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin">
+                Get Deal
+              </h3>
+              <p class="bannerinsite-right-arrow bannerinsite-margin">→</p>
+            </a>
+          </div>
+          <p onclick="bannerInsiteDisclaimerModal('1GKKNPLS0PZ192305','2023','GMC','Acadia','Denali')"
+            class="bannerinsite-offers bannerinsite-uppercase bannerinsite-margin bannerinsite-text-white">
+            *Offers and Disclaimer
+          </p>
+        </div>
+      </div>
+      <div style="display: none" id="BannerinsiteFinancingDisclaimerText_1GKKNPLS0PZ192305">
+        The payment shown is an estimate and not an offer. Your terms may
+        differ based on your credit history. Not all customers will qualify
+        for financing. Incentives shown are based on dealer zip code. We try
+        to keep vehicle inventory, manufacturer rebates, and pricing up to
+        date, but we cannot guarantee that this vehicle will be available when
+        you get to Jim Ellis Buick GMC Atlanta or that there may not be some
+        variation from what you see estimated here.<br />
+        For a lease it is important to understand that if you return your
+        vehicle and mileage exceeds the amount allowed under your lease, you
+        will be responsible for the excess miles driven. Tax, tag, title,
+        dealer doc, and Warranty Rights Act fees excluded. Available to
+        qualified customers with approved credit. See dealer for full details.
+        Finace offer expires on 2024-04-30. Lease offer expires on 2024-04-30
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

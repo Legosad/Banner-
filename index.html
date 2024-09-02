@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Style sheet  -->
+    <!-- <link rel="stylesheet" href="styles/styles.css" /> -->
+    <style>
+      .bannerinsite-container {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.9) 0,
+            rgba(255, 255, 255, 0.5) 34%,
+            rgba(255, 255, 255, 0) 44%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          url(/resources/AdobeStock-edited.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* height: 150px; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 40% 20%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.5rem;
+      }
+      .bannerinsite-uppercase {
+        text-transform: uppercase;
+      }
+      .bannerinsite-margin {
+        margin: 0;
+      }
+      .bannerinsite-img {
+        clip-path: polygon(7% 29%, 86% 28%, 86% 77%, 7% 79%);
+        height: 100%;
+        width: auto;
+      }
+
+      .bannerinsite-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* background-color: rgba(255, 255, 255, 0.7); */
+      }
+      .bannerinsite-title {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        margin-left: 15px;
+      }
+      .bannerinsite-price {
+        font-size: 2.3rem;
+      }
+      .bannerinsite-text-for {
+        font-size: 0.7rem;
+      }
+
+      .bannerinsite-finance-for {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-basis: 50%;
+      }
+      .bannerinsite-lease-for {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-basis: 50%;
+      }
+      .bannerinsite-price-text {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+      }
+      .bannerinsite-finance-for .bannerinsite-details {
+        padding-left: 15px;
+      }
+      /* .bannerinsite-lease-for .bannerinsite-price-text {
+        justify-content: flex-end;
+      } */
+      .bannerinsite-lease-for .bannerinsite-details {
+        width: 89%;
+      }
+      .bannerinsite-lease-for .bannerinsite-details-p {
+        text-align: end;
+      }
+      .bannerinsite-finance-for .bannerinsite-price-text {
+        border-right: 2px solid #333;
+      }
+      .bannerinsite-lease-for .bannerinsite-sub-text {
+        width: 100%;
+        text-align: right;
+      }
+      .bannerinsite-p {
+        font-size: 0.5rem;
+      }
+      .bannerinsite-details-p {
+        margin: 5px 0;
+        font-size: 0.7rem;
+      }
+      .bannerinsite-sub-text {
+        font-size: 0.5rem;
+      }
+      .bannerinsite-offers {
+        font-size: 0.5rem;
+        color: #fff;
+        text-align: right;
+        width: 100%;
+        text-align: right;
+      }
+      .bannerinsite-discounts {
+        font-size: 0.5rem;
+      }
+      .bannerinsite-other-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: -3rem;
+      }
+      .bannerinsite-option {
+        background-color: red;
+        padding: 0.2rem;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 45%;
+        margin-bottom: -0.8rem;
+      }
+      .bannerinsite-h3 {
+        font-size: 0.7rem;
+      }
+      .bannerinsite-image-container {
+        width: 100%;
+        overflow: hidden;
+        padding-right: 1rem;
+      }
+      .bannerinsite-img {
+        width: 110%;
+      }
+
+      @media screen and (min-width: 768px) {
+        .bannerinsite-container {
+          flex-direction: row;
+          background-image: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 0.9) 0%,
+              rgba(255, 255, 255, 0.5) 45%,
+              rgba(255, 255, 255, 0) 55%,
+              rgba(255, 255, 255, 0) 100%
+            ),
+            url(/resources/AdobeStock_283316930.webp);
+          height: 150px;
+          background-position: 40% 45%;
+        }
+
+        .bannerinsite-info {
+          align-self: flex-start;
+        }
+        .bannerinsite-title {
+          margin-bottom: 1rem;
+          margin-left: 0;
+        }
+        .bannerinsite-image-container {
+          width: 75%;
+          padding: 0;
+          flex-basis: 45%;
+        }
+        .bannerinsite-price-text {
+          gap: 1rem;
+          justify-content: flex-start;
+        }
+        .bannerinsite-other-options {
+          flex-direction: column;
+          justify-content: flex-end;
+          width: 35%;
+          align-self: flex-end;
+          align-items: flex-end;
+        }
+        .bannerinsite-option {
+          max-width: 150px;
+          min-width: 125px;
+        }
+        .bannerinsite-details-p {
+          margin: 0.5rem 0 !important;
+        }
+        .bannerinsite-lease-for .bannerinsite-details-p {
+          text-align: left;
+        }
+        .bannerinsite-details-p {
+          font-size: 0.65rem !important;
+        }
+        .bannerinsite-text-for {
+          font-size: 0.7rem;
+        }
+        .bannerinsite-p {
+          margin: 0;
+          font-size: 0.6rem;
+        }
+        .bannerinsite-price {
+          font-size: 2.5rem;
+        }
+        .bannerinsite-lease-for,
+        .bannerinsite-finance-for {
+          flex-basis: 35%;
+        }
+        .bannerinsite-lease-for .bannerinsite-sub-text {
+          margin: 0;
+          text-align: left;
+        }
+        .bannerinsite-sub-text {
+          min-width: 190px;
+        }
+        .bannerinsite-lease-for .bannerinsite-details-p {
+          margin: 0;
+        }
+        .bannerinsite-lease-for .bannerinsite-price-text {
+          justify-content: flex-start;
+        }
+        .bannerinsite-discounts {
+          font-size: 0.6rem;
+        }
+        .bannerinsite-img {
+          max-width: 350px;
+          width: 100%;
+        }
+        .bannerinsite-lease-for {
+          align-items: flex-start;
+          padding-left: 8px;
+        }
+        .bannerinsite-details {
+          width: 100% !important;
+          padding-left: 0 !important;
+        }
+        .bannerinsite-other-options {
+          width: 20%;
+        }
+      }
+      @media screen and (min-width: 1100px) {
+        .bannerinsite-container {
+          background-image: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 1) 0%,
+              rgba(255, 255, 255, 0.65) 30%,
+              rgba(255, 255, 255, 0) 45%,
+              rgba(255, 255, 255, 0) 100%
+            ),
+            url(/resources/AdobeStock_283316930.webp);
+        }
+        .bannerinsite-image-container {
+          width: 40%;
+          padding-right: 8vw;
+        }
+        .bannerinsite-text-for {
+          max-width: 70px;
+        }
+        .bannerinsite-details {
+          width: 100%;
+        }
+        .bannerinsite-title {
+          margin: 0;
+        }
+        .bannerinsite-details-p {
+          margin-top: 0 !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .bannerinsite-img {
+          width: 120%;
+        }
+        .bannerinsite-p {
+          margin: 0;
+          font-size: 0.7rem;
+        }
+        .bannerinsite-other-options {
+          width: 11%;
+        }
+        .bannerinsite-price-text {
+          gap: 1rem;
+        }
+        .bannerinsite-price {
+          font-size: 3.5rem;
+        }
+        .bannerinsite-sub-text {
+          min-width: 255px;
+        }
+        .bannerinsite-details-p,
+        .bannerinsite-text-for {
+          font-size: 0.85rem !important;
+        }
+        .bannerinsite-discounts {
+          font-size: 0.8rem;
+        }
+        .bannerinsite-p {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bannerinsite-container">
+      <div class="bannerinsite-info">
+        <h2
+          class="bannerinsite-title bannerinsite-uppercase bannerinsite-margin"
+        >
+          2024 Buick Enclave
+        </h2>
+        <div class="bannerinsite-finance-for">
+          <div class="bannerinsite-price-text">
+            <p
+              class="bannerinsite-text-for bannerinsite-uppercase bannerinsite-margin"
+            >
+              Finance <br />
+              For
+            </p>
+            <h1
+              class="bannerinsite-price bannerinsite-uppercase bannerinsite-margin"
+            >
+              $9999
+            </h1>
+          </div>
+          <div class="bannerinsite-details">
+            <p
+              class="bannerinsite-uppercase bannerinsite-p bannerinsite-margin bannerinsite-details-p"
+            >
+              For 99 Months | 999% APR
+            </p>
+            <p
+              class="bannerinsite-sub-text bannerinsite-p bannerinsite-uppercase bannerinsite-margin"
+            >
+              Save $99,999 with Jim Ellis Discount
+            </p>
+            <p class="bannerinsite-discounts bannerinsite-margin">
+              (Discount + Rebate)
+            </p>
+          </div>
+        </div>
+        <div class="bannerinsite-lease-for">
+          <div class="bannerinsite-price-text">
+            <p
+              class="bannerinsite-text-for bannerinsite-uppercase bannerinsite-margin"
+            >
+              Lease <br />
+              For
+            </p>
+            <h1
+              class="bannerinsite-price bannerinsite-uppercase bannerinsite-margin"
+            >
+              $9999
+            </h1>
+          </div>
+          <div class="bannerinsite-details">
+            <p
+              class="bannerinsite-p bannerinsite-details-p bannerinsite-uppercase bannerinsite-margin"
+            >
+              For 99 Months | 999% APR
+            </p>
+            <p
+              class="bannerinsite-sub-text bannerinsite-p bannerinsite-uppercase bannerinsite-margin"
+            >
+              National Lease Special
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bannerinsite-image-container">
+        <!--Link to Car images to be added here -->
+        <img
+          class="bannerinsite-img"
+          src="https://d2ivfcfbdvj3sm.cloudfront.net/6fd260a869c389e6f8668ba55dfb5f70ed0d4a540b1c378f88cc1df8abcb86646d/color_0640_032_png/MY2023/50982/50982_cc0640_032_C7R.webp"
+          alt=""
+        />
+      </div>
+      <div class="bannerinsite-other-options">
+        <a class="bannerinsite-option" href="">
+          <h3
+            class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin"
+          >
+            Lowest Payment
+          </h3>
+          <p class="bannerinsite-right-arrow bannerinsite-margin">&#x02192;</p>
+        </a>
+        <a class="bannerinsite-option" href="">
+          <h3
+            class="bannerinsite-h3 bannerinsite-uppercase bannerinsite-margin"
+          >
+            View Details
+          </h3>
+          <p class="bannerinsite-right-arrow bannerinsite-margin">&#x02192;</p>
+        </a>
+        <p
+          class="bannerinsite-offers bannerinsite-uppercase bannerinsite-margin"
+        >
+          *Offers and Disclaimer
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
